@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Suhu</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Kalkulator Suhu</h1>
+
+  <div class="form-container">
+    <form onsubmit="return false;">
+
+      <p class="justify">Masukkan suhu derajat Celcius (°C) ke kotak dibawah ini, kemudian klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</p>
+      <label for="inputSuhu">Celcius (°C):</label>
+      <input type="text" id="inputSuhu" placeholder="Masukkan suhu" />
+
+      <div class="button-container">
+        <button onclick="konversiSuhu()">Konversi</button>
+        <button onclick="resetForm()">Reset</button>
+        <button onclick="reverseKonversi()">Reverse</button>
+      </div>
+
+      <label for="hasilKonversi">Fahrenheit (°F):</label>
+      <input type="text" id="hasilKonversi" readonly />
+
+      <label for="penjelasan">Cara Kalkulasi:</label>
+      <textarea id="penjelasan" rows="3" readonly></textarea>
+
+      <p style="color: purple;">Fahrenheit ke Celcius</p>
+      <h4>Cara Konversi Dari Celcius (°C) ke Fahrenheit (°F)<hr /></h4>
+      <p>Suhu S dalam derajat Fahrenheit (°F) sama dengan suhu S dalam derajat Celsius (°C) kali 9/5 tambah 32.</p>
+      <p>S(°F) = (S(°C) × 9/5) + 32</p>
+      <p>atau</p>
+      <p>S(°F)=(S(°C) × 1.8) + 32</p>
+      <span id="errorText" class="error-text"></span>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
